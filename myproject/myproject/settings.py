@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.chuyenthue', 
+    'gunicorn',
+    'django_tables2',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -119,3 +122,22 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+#STATICFILES_DIRS=(
+#                  os.path.join(BASE_DIR,'static'),
+				  #/Users/ADMIN/OneDrive/hoclamweb/django/qldd/qldd/static/static_root/,
+#)
+#STATIC_ROOT=os.path.join(BASE_DIR,'live-static','static-root')
+
+
+STATIC_ROOT = os.path.join(BASE_DIR,'static','static_dirs') # chu y load css
+
+STATICFILES_DIRS=(
+                  os.path.join(BASE_DIR,'static','static_root'),
+				  #/Users/ADMIN/OneDrive/hoclamweb/django/qldd/qldd/static/static_root/,
+)
+#STATICFILES_DIRS = (os.path.join(PROJECT_ROOT, 'static'),) 
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+MEDIA_URL="/media/"
+MEDIA_ROOT=os.path.join(BASE_DIR,"live-static","media-root")
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
