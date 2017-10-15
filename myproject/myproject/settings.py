@@ -127,10 +127,10 @@ STATIC_URL = '/static/'
 #                  os.path.join(BASE_DIR,'static'),
 				  #/Users/ADMIN/OneDrive/hoclamweb/django/qldd/qldd/static/static_root/,
 #)
-#STATIC_ROOT=os.path.join(BASE_DIR,'live-static','static-root')
+STATIC_ROOT=os.path.join(BASE_DIR,'live-static','static-root')
 
 
-STATIC_ROOT = os.path.join(BASE_DIR,'static','static_dirs') # chu y load css
+#STATIC_ROOT = os.path.join(BASE_DIR,'static','static_dirs') # chu y load css
 
 STATICFILES_DIRS=(
                   os.path.join(BASE_DIR,'static','static_root'),
