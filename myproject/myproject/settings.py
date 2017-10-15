@@ -11,9 +11,12 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
-
+import dj_database_url
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+#BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+#PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # Quick-start development settings - unsuitable for production
@@ -127,10 +130,10 @@ STATIC_URL = '/static/'
 #                  os.path.join(BASE_DIR,'static'),
 				  #/Users/ADMIN/OneDrive/hoclamweb/django/qldd/qldd/static/static_root/,
 #)
-STATIC_ROOT=os.path.join(BASE_DIR,'live-static','static-root')
+#STATIC_ROOT=os.path.join(BASE_DIR,'live-static','static-root')
 
 
-#STATIC_ROOT = os.path.join(BASE_DIR,'static','static_dirs') # chu y load css
+STATIC_ROOT = os.path.join(BASE_DIR,'static','static_dirs') # chu y load css
 
 STATICFILES_DIRS=(
                   os.path.join(BASE_DIR,'static','static_root'),
