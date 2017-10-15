@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.chuyenthue', 
     'gunicorn',
-    'django_tables2',
 ]
 
 
@@ -140,8 +139,8 @@ STATICFILES_DIRS=(
 				  #/Users/ADMIN/OneDrive/hoclamweb/django/qldd/qldd/static/static_root/,
 )
 #STATICFILES_DIRS = (os.path.join(PROJECT_ROOT, 'static'),) 
-#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 MEDIA_URL="/media/"
 MEDIA_ROOT=os.path.join(BASE_DIR,"live-static","media-root")
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
